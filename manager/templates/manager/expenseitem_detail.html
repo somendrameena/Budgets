@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load tz %}
+{% block head_title%}
+Expense Item {{object.id}} || {{block.super}}
+{% endblock%}
+
+{% block content %}
+<table style="margin:5; padding:5" cellpadding="3">
+    <tr>
+        <th>
+            <span class="h3">{{object.title}}
+                <small class="text-muted">{{object.type}} </small>
+            </span>
+        </th>
+
+        <td>
+            <a href="/detail/{{object.id}}/edit">
+                <img src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/new-24-512.png" alt="Edit"
+                     style="width:30px;height:30px;border:0;">
+
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <th>Amount:</th>
+        <td>{{object.amount}}</td>
+    </tr>
+    <tr>
+        <th>Account:</th>
+        <td>{{object.account}}</td>
+    </tr>
+    <tr>
+        <th>Date:</th>
+        <td>{{object.date}}</td>
+    </tr>
+    <tr>
+        <th>Description:</th>
+        <td>{{object.description}}</td>
+    </tr>
+    <tr>
+        <th>Added on:</th>
+        <td>{{object.added}}</td>
+    </tr>
+    <tr>
+        <th>Last Updated:</th>
+        <td><i>{{object.updated|timesince}}</i> ago</td>
+    </tr>
+</table>
+</br>
+<a href="./delete"><input type="button" name="delete" class="btn btn-danger" value="Delete"></a>
+<a href="/viewall"><input type="button" name="back" class="btn btn-outline-primary" value="Back"></a>
+{% endblock %}

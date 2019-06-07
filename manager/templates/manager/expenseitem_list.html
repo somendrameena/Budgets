@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head_title%}
+Expense List || {{block.super}}
+{% endblock%}
+
+{% block content %}
+<table cellspacing="1" border="2" class="table">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Date</th>
+    </tr>
+{% for object in object_list %}
+    <tr>
+        <td><a href="/detail/{{object.id}}">{{object.id}}</a></td>
+        <td>{{object.title}}</td>
+        <td>{{object.date}}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head_title%}
+Add Item || {{block.super}}
+{% endblock%}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {% include 'snippets/tweak_form.html' with form=form %}
+    <input type="submit" name="add" class="btn btn-primary" value="Add Item">
+    <a href="/"><input type="button" name="back" class="btn btn-outline-primary" value="Back"></a>
+</form>
+{% endblock %}

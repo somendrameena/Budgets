@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block head_title%}
+Add Item || {{block.super}}
+{% endblock%}
+
+{% block content %}
+<p>Item Added</p>
+
+<a href="/addnew"><input type="button" class="btn btn-primary" value="Add another item"></a>
+<a href="/viewall"><input type="button" class="btn btn-outline-primary" value="View items"></a>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head_title%}
+Delete Item || {{block.super}}
+{% endblock%}
+
+{% block content %}
+<h5>Item ID : {{object.id}}</h5>
+<form method="post" novalidate>
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" name="update" class="btn btn-danger" value="Delete">
+    <a href="/detail/{{object.id}}"><input type="button" class="btn btn-outline-primary" value="Cancel"></a>
+</form>
+{% endblock %}

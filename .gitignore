@@ -1,0 +1,16 @@
+# PyCharm
+.idea/
+__pycache__/
+
+# Virtual Environment
+venv/
+
+# Migrations
+migrations/
+
+# Database
+db.sqlite3
+
+# Static files
+static/
+staticfiles/

@@ -1,0 +1,8 @@
+<a href="/">Home</a> | <a href="/contact">Contact Page</a> | <a href="/admin">Admin Panel</a>
+</br></br>
+{% if user.is_authenticated %}
+<b>Welcome {{user.first_name}}..!!</b>
+<a href="/user">Profile</a> | <a href="/admin/logout/?next=/">Sign Out</a>
+{% else %}
+<a href="/admin/login/?next=/">Sign In</a> | <a href="/register">Sign Up</a>
+{% endif %}

@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        {% block head_title%}
+        Expense Manager App
+        {% endblock%}
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+</head>
+<body style="margin:5; padding:5">
+<h1>Expense Manager</h1>
+<h4>By Somendra Meena</h4>
+{% include 'snippets/nav.html' %}
+<p></p>
+{% block content %}
+{% endblock %}
+</body>
+</html>
